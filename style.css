@@ -1,0 +1,22 @@
+/* Global Styles for Japan Travel Slides */
+
+/* H3 스타일 - 다크모드 최적화 */
+h3 {
+  font-size: 1.25rem !important; /* text-xl */
+  font-weight: 600 !important; /* font-semibold */
+  color: #fff !important; /* text-white */
+  margin-bottom:0.75rem !important;
+}
+
+/* H4 스타일 - 다크모드 최적화 */
+h4 {
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  color: #e5e7eb !important; /* text-gray-200 */
+}
+
+/* Primary color 설정 */
+:root {
+  --slidev-theme-primary: #61A6FB;
+}
+
