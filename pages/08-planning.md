@@ -21,16 +21,22 @@ transition: slide-up
 
 ### <mdi-note-edit class="inline text-amber-400" /> 내가 일정 짜는 방법
 
-<div v-click class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 #### <mdi-numeric-1-circle class="inline text-blue-400" /> 러프하게 짜기
 
 - 현지에서는 **변수가 많음**
-- 단, 도쿄·오사카 등 대도시는 컨텐츠가 많기 때문에 **타이트하게** 짜는 것이 적절
+- 단, 도쿄·오사카 등 대도시는 할 수 있는 컨텐츠가 많기 때문에 **타이트하게** 짜는 것이 적절
 
 </div>
 
-<div v-click class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 #### <mdi-numeric-2-circle class="inline text-green-400" /> 구글 지도 활용
 
@@ -38,7 +44,10 @@ transition: slide-up
 
 </div>
 
-<div v-click class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 #### <mdi-numeric-3-circle class="inline text-orange-400" /> 현지 관광안내소 방문
 
@@ -49,7 +58,10 @@ transition: slide-up
 
 </div>
 
-<div v-click class="mt-12">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-12">
 
 <img src="/assets/CleanShot_2025-12-07_16.55.45@2x-5094151.png" class="rounded-lg shadow-xl border border-gray-700" />
 

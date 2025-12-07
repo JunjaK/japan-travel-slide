@@ -22,7 +22,9 @@ layout: two-cols-header
   <mdi-airplane-takeoff class="inline"/> <span v-mark.underline.orange="0">항공권 예매가 여행의 시작!</span>
 </div>
 
-<div v-click="1">
+<div v-click="1" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }">
 
 ### <mdi-lightbulb class="inline text-yellow-400" /> 예매 팁
 
@@ -32,13 +34,19 @@ layout: two-cols-header
 
 </div>
 
-<div v-click="2" style="margin-top: -12px">
+<div v-click="2" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  style="margin-top: -12px">
 
 ### <mdi-magnify class="inline text-cyan-400" /> 주요 애매처
 - 항공권 검색 서비스
   - **Skyscanner**
   - **네이버 항공권**
-<div v-click class="p-3 bg-red-900/30 rounded-lg border border-red-700/50" style="margin-top: -12px">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -15 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 300 } }"
+  class="p-3 bg-red-900/30 rounded-lg border border-red-700/50" style="margin-top: -12px">
   <mdi-alert class="inline text-red-400" /> <strong>주의</strong>: 국외 여행사는 안하는 것 추천
 </div>
 
@@ -47,7 +55,10 @@ layout: two-cols-header
 </div>
 
 ::right::
-<div v-click="2" class="text-center">
+<div v-click="2" v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="text-center">
   <img src="/assets/opengraph_v1.png" class="rounded-lg shadow-lg mb-4 ml-18 h-70 border border-gray-700" />
 
   <img src="/assets/X7WhsGd1WgdyOL_zRh5tGITxOF-YCESs2Fk4EL3C6cNQhLcj2NOuXjJ3SnmrnTsygbWhXoOx97YCmCiq_T-XUA.webp" class="rounded-lg shadow-lg h-24 mx-auto border border-gray-700" />
@@ -65,7 +76,10 @@ transition: slide-left
 
 
 
-<div v-click class="mt-2 p-4 bg-gradient-to-r from-green-900/40 to-emerald-900/40 rounded-lg border-2 border-green-500/50">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-2 p-4 bg-gradient-to-r from-green-900/40 to-emerald-900/40 rounded-lg border-2 border-green-500/50">
 
 ### <mdi-ticket-confirmation class="inline text-amber-400" /> 이번 여행 항공권
 
@@ -81,7 +95,10 @@ transition: slide-left
 
 </div>
 
-<div v-click class="mt-6">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-6">
 
 <img src="/assets/CleanShot_2025-12-07_15.56.08@2x.png" class="rounded-lg shadow-xl border border-gray-700" />
 
@@ -95,12 +112,18 @@ transition: fade-out
 
 # 교통편 준비 - 현지 교통편
 
-<div v-click="1" class="p-4 bg-yellow-900/30 rounded-lg border border-yellow-600/50 mb-6">
+<div v-click="1" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="p-4 bg-yellow-900/30 rounded-lg border border-yellow-600/50 mb-6">
 
 <mdi-lightbulb-on class="inline text-yellow-400" /> **교통 패스 vs IC 카드 (스이카, 파스모 등)**<br>
 - 귀찮은 사람: IC 카드 이용
 - 절약 또는 동선짜기 좋아하는 사람: 교통 패스 이용
-<div v-click="2" class="p-3 bg-amber-900/40 rounded-lg text-sm" style="margin-top: -12px">
+<div v-click="2" v-motion
+  :initial="{ opacity: 0, y: -15 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 300 } }"
+  class="p-3 bg-amber-900/40 rounded-lg text-sm" style="margin-top: -12px">
 <mdi-alert-circle class="inline text-amber-400" /> 최근 교통 패스 가격이 많이 올라, 동선과 제휴 시설 이용 계획을 잘 짜지 않으면 생각보다 이득을 많이 못봄<br>
 → 귀찮으면 <strong>IC 카드</strong>만 사용해서 이동하는 것도 나쁘지 않음!
 </div>
@@ -108,11 +131,16 @@ transition: fade-out
 
 </div>
 
-<h2 style="margin-top: -12px; margin-bottom: 8px" v-click="3">이번 여행에 이용한 수단</h2>
+<h2 style="margin-top: -12px; margin-bottom: 8px" v-click="3" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }">이번 여행에 이용한 수단</h2>
 
 <div class="grid grid-cols-3 gap-6">
 
-<div v-click="3" class="p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+<div v-click="3" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 
 ### <mdi-bus class="inline text-green-400" /> 현지 예매 사이트
@@ -124,7 +152,10 @@ transition: fade-out
 
 </div>
 
-<div v-click="4" class="p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+<div v-click="4" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 ### <mdi-credit-card class="inline text-purple-400" /> IC 카드 (교통카드)
 
@@ -136,7 +167,10 @@ transition: fade-out
 
 </div>
 
-<div v-click="5" class="p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+<div v-click="5" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 ### <mdi-ticket-outline class="inline text-orange-400" /> Klook
 해외 여행객을 위한 패스 이용할 때 주로 사용
@@ -156,7 +190,10 @@ transition: slide-up
 
 <div class="grid grid-cols-3 gap-6">
 
-<div v-click class="text-center">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="text-center">
 
 <img src="/assets/CleanShot_2025-12-07_19.12.19@2x.png" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
 
@@ -164,7 +201,10 @@ transition: slide-up
 
 </div>
 
-<div v-click class="text-center">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="text-center">
 
 <img src="/assets/C6695916-06A0-431C-9AAD-CC4270ACDA4C_1_102_o-5094082.jpeg" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
 
@@ -172,7 +212,10 @@ transition: slide-up
 
 </div>
 
-<div v-click class="text-center">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="text-center">
 
 <img src="/assets/4A52888E-100C-4256-AA71-6B7C6BE18DFA_1_102_o-5094065-5094068.jpeg" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
 

@@ -20,7 +20,10 @@ transition: slide-up
 
 ### <mdi-youtube class="inline text-red-500" /> 유튜브 리뷰
 
-<div v-click class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 
 - 아래 리뷰를 보고 **플로릴레쥬** 논알콜 페어링 디너 예약하여 방문
@@ -30,7 +33,9 @@ transition: slide-up
 </div>
 
 
-<div v-click>
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }">
 
 <img src="/assets/CleanShot_2025-12-07_16.32.06@2x.png" class="rounded-lg mt-2 shadow-xl border border-gray-700" />
 
@@ -53,13 +58,18 @@ transition: slide-left
 
 </div>
 
-<h3 v-click="0">
+<h3 v-click="0" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }">
 <mdi-silverware-fork-knife class="inline text-orange-400" /> 쿠사츠에서 방문한 식당
 </h3>
 
 <div class="grid grid-cols-3 gap-6">
 
-<div v-click class="text-center">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="text-center">
 
 <img src="/assets/CleanShot_2025-12-07_19.25.31@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
 
@@ -67,7 +77,10 @@ transition: slide-left
 
 </div>
 
-<div v-click class="text-center">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="text-center">
 
 <img src="/assets/CleanShot_2025-12-07_19.35.15@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
 
@@ -75,7 +88,10 @@ transition: slide-left
 
 </div>
 
-<div v-click class="text-center">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="text-center">
 
 <img src="/assets/CleanShot_2025-12-07_19.28.39@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
 
@@ -114,7 +130,9 @@ transition: slide-left
 
 <div class="grid grid-cols-2 gap-8 mt-2">
 
-<div v-click="1">
+<div v-click="1" v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }">
 
 ### <mdi-chart-bar class="inline text-purple-400" /> 타베로그 vs 구글 맵
 
@@ -132,9 +150,11 @@ transition: slide-left
 
 </div>
 
-<div v-click="2">
+<div v-click="2" v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }">
 
-### <mdi-map-marker-check class="inline text-green-400" /> 방문했던 가게
+### <mdi-map-marker-check class="inline text-green-400" /> 방문했던 가게 (이전 도쿄여행 때)
 
 <img src="/assets/CleanShot_2025-12-07_19.29.15@2x.png" class="rounded-lg shadow-xl border border-gray-700 h-48" />
 

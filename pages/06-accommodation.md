@@ -21,7 +21,10 @@ transition: slide-left
 
 ### <mdi-cellphone class="inline text-blue-400" /> Booking 등 호텔 예약 플랫폼
 
-<div v-click class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
 
 **신주쿠 숙소**
 
@@ -31,7 +34,10 @@ transition: slide-left
 
 </div>
 
-<div v-click class="mt-4">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-4">
 
 <img src="/assets/CleanShot_2025-12-07_16.22.01@2x.png" class="rounded-lg shadow-lg border border-gray-700" />
 
@@ -43,7 +49,10 @@ transition: slide-left
 
 ### <mdi-domain class="inline text-amber-400" /> 숙소 공식 홈페이지
 
-<div v-click class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -20 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
 
 **카네미도리(金みどり)**: 쿠사츠 온천 여관
 
@@ -52,7 +61,10 @@ transition: slide-left
 - <mdi-star-four-points class="inline text-yellow-400" /> 쿠사츠 갈 일 있으면 이 숙소 추천!
 </div>
 
-<div v-click class="mt-4">
+<div v-click v-motion
+  :initial="{ opacity: 0, y: -30 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
+  class="mt-4">
 
 <img src="/assets/CleanShot_2025-12-07_16.25.35@2x.png" class="rounded-lg shadow-lg border border-gray-700" />
 
