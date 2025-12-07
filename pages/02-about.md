@@ -10,7 +10,7 @@ class: text-center
   :initial="{ opacity: 0, y: -20 }"
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="text-2xl text-gray-400 mt-8 leading-relaxed">
-워크샵 일정 짜다가 추천받아 진행하게...
+워크샵 일정 짜다 추천받아 어쩌다보니 진행하게...
 </div>
 
 <div v-click v-motion

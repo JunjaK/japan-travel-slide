@@ -152,7 +152,7 @@ transition: fade-out
 transition: slide-up
 ---
 
-# 교통편 준비 - 현지 교통편 예매 인증
+# 교통편 준비 - 현지 교통편 (실제 이용)
 
 <div class="grid grid-cols-3 gap-6">
 

@@ -15,11 +15,10 @@ fonts:
   sans: 'Pretendard'
   serif: 'Noto Serif KR'
   mono: 'Fira Code'
----
+src: ./pages/01-intro.md
 
 ---
-src: ./pages/01-intro.md
----
+
 
 ---
 src: ./pages/02-about.md
@@ -50,6 +49,26 @@ src: ./pages/08-planning.md
 ---
 
 ---
-src: ./pages/09-outro.md
+src: ./pages/09-photo-intro.md
+---
+
+---
+src: ./pages/10-day1.md
+---
+
+---
+src: ./pages/11-day2.md
+---
+
+---
+src: ./pages/12-day3.md
+---
+
+---
+src: ./pages/13-day4.md
+---
+
+---
+src: ./pages/99-outro.md
 ---
 

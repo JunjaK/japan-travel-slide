@@ -5,8 +5,8 @@ const props = defineProps({
   images: {
     type: Array,
     default: () => [
-      { src: '/assets/sample1.jpg', title: 'Image 1', subtitle: 'Description 1' },
-      { src: '/assets/sample2.jpg', title: 'Image 2', subtitle: 'Description 2' },
+      { src: '/assets/0806EC42-2411-44A1-985B-DA3473620576_1_105_c.jpeg', title: 'Image 1', subtitle: 'Description 1' },
+      { src: '/assets/093928DA-0E79-442F-A1B7-26C0407A4A7A_1_105_c.jpeg', title: 'Image 2', subtitle: 'Description 2' },
       { src: '/assets/sample3.jpg', title: 'Image 3', subtitle: 'Description 3' },
     ]
   },

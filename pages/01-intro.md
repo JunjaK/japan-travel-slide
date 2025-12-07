@@ -1,6 +1,6 @@
 ---
-layout: cover
-background: https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1920
+layout: intro-image
+image: '/assets/CleanShot_2025-12-07_23.15.58@2x.png'
 class: text-center
 ---
 
