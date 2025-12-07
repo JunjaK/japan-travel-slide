@@ -59,9 +59,9 @@ layout: two-cols-header
   :initial="{ opacity: 0, y: -30 }"
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="text-center">
-  <img src="/assets/opengraph_v1.png" class="rounded-lg shadow-lg mb-4 ml-18 h-70 border border-gray-700" />
+  <img src="/images/opengraph_v1.png" class="rounded-lg shadow-lg mb-4 ml-18 h-70 border border-gray-700" />
 
-  <img src="/assets/X7WhsGd1WgdyOL_zRh5tGITxOF-YCESs2Fk4EL3C6cNQhLcj2NOuXjJ3SnmrnTsygbWhXoOx97YCmCiq_T-XUA.webp" class="rounded-lg shadow-lg h-24 mx-auto border border-gray-700" />
+  <img src="/images/X7WhsGd1WgdyOL_zRh5tGITxOF-YCESs2Fk4EL3C6cNQhLcj2NOuXjJ3SnmrnTsygbWhXoOx97YCmCiq_T-XUA.webp" class="rounded-lg shadow-lg h-24 mx-auto border border-gray-700" />
 </div>
 
 ---
@@ -100,7 +100,7 @@ transition: slide-left
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="mt-6">
 
-<img src="/assets/CleanShot_2025-12-07_15.56.08@2x.png" class="rounded-lg shadow-xl border border-gray-700" />
+<img src="/images/CleanShot_2025-12-07_15.56.08@2x.png" class="rounded-lg shadow-xl border border-gray-700" />
 
 </div>
 
@@ -195,7 +195,7 @@ transition: slide-up
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="text-center">
 
-<img src="/assets/CleanShot_2025-12-07_19.12.19@2x.png" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
+<img src="/images/CleanShot_2025-12-07_19.12.19@2x.png" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
 
 <div class="mt-2 text-sm text-gray-500">신주쿠 - 쿠사츠 버스 예약</div>
 
@@ -206,7 +206,7 @@ transition: slide-up
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="text-center">
 
-<img src="/assets/C6695916-06A0-431C-9AAD-CC4270ACDA4C_1_102_o-5094082.jpeg" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
+<img src="/images/C6695916-06A0-431C-9AAD-CC4270ACDA4C_1_102_o-5094082.jpeg" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
 
 <div class="mt-2 text-sm text-gray-500">IC 카드 (스이카)</div>
 
@@ -217,7 +217,7 @@ transition: slide-up
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="text-center">
 
-<img src="/assets/4A52888E-100C-4256-AA71-6B7C6BE18DFA_1_102_o-5094065-5094068.jpeg" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
+<img src="/images/4A52888E-100C-4256-AA71-6B7C6BE18DFA_1_102_o-5094065-5094068.jpeg" class="rounded-lg shadow-xl h-60 object-cover border border-gray-700 mx-auto" />
 
 <div class="mt-2 text-sm text-gray-500">Klook 예약 화면</div>
 

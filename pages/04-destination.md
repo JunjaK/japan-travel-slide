@@ -54,7 +54,7 @@ transition: slide-left
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="mt-12">
 
-<img src="/assets/CleanShot_2025-12-07_15.46.04@2x.png" class="rounded-lg shadow-xl border border-gray-700" />
+<img src="/images/CleanShot_2025-12-07_15.46.04@2x.png" class="rounded-lg shadow-xl border border-gray-700" />
 
 <div class="text-sm text-gray-500 mt-2 text-center">
 구글 맵에 저장해둔 장소들

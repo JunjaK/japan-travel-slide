@@ -41,8 +41,33 @@ const modalHoveredIndex = ref(-1)
 let animationId = null
 let lastTime = 0
 
+// 이미지 경로 정규화 함수 (빌드 시 base path 처리)
+const normalizeImagePath = (path) => {
+  if (!path) return ''
+  // 이미 절대 경로로 시작하는 경우 그대로 반환
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path
+  }
+  
+  // 이미 /로 시작하는 경우 그대로 반환
+  if (path.startsWith('/')) {
+    return path
+  }
+  // 상대 경로인 경우 base URL 추가
+  const base = import.meta.env.BASE_URL || '/'
+  return `${base}${path.startsWith('./') ? path.slice(2) : path}`
+}
+
+// 이미지 경로를 정규화한 computed
+const normalizedImages = computed(() => {
+  return props.images.map(img => ({
+    ...img,
+    src: normalizeImagePath(img.src)
+  }))
+})
+
 // 최대 8개의 이미지만 표시
-const displayImages = computed(() => props.images.slice(0, 8))
+const displayImages = computed(() => normalizedImages.value.slice(0, 8))
 const imageCount = computed(() => displayImages.value.length)
 const anglePerImage = computed(() => 360 / Math.max(imageCount.value, 1))
 
@@ -121,22 +146,22 @@ const closeFullscreen = () => {
 const goToPrevImage = () => {
   if (fullscreenIndex.value > 0) {
     fullscreenIndex.value--
-    fullscreenImage.value = props.images[fullscreenIndex.value]
+    fullscreenImage.value = normalizedImages.value[fullscreenIndex.value]
   } else {
     // Loop to last image
-    fullscreenIndex.value = props.images.length - 1
-    fullscreenImage.value = props.images[fullscreenIndex.value]
+    fullscreenIndex.value = normalizedImages.value.length - 1
+    fullscreenImage.value = normalizedImages.value[fullscreenIndex.value]
   }
 }
 
 const goToNextImage = () => {
-  if (fullscreenIndex.value < props.images.length - 1) {
+  if (fullscreenIndex.value < normalizedImages.value.length - 1) {
     fullscreenIndex.value++
-    fullscreenImage.value = props.images[fullscreenIndex.value]
+    fullscreenImage.value = normalizedImages.value[fullscreenIndex.value]
   } else {
     // Loop to first image
     fullscreenIndex.value = 0
-    fullscreenImage.value = props.images[fullscreenIndex.value]
+    fullscreenImage.value = normalizedImages.value[fullscreenIndex.value]
   }
 }
 
@@ -256,7 +281,7 @@ onUnmounted(() => {
             
             <div class="modal-grid">
               <div
-                v-for="(image, index) in images"
+                v-for="(image, index) in normalizedImages"
                 :key="index"
                 class="modal-image-card"
                 :class="{ 'is-hovered': modalHoveredIndex === index }"
@@ -313,7 +338,7 @@ onUnmounted(() => {
           
           <!-- Image Counter -->
           <div class="image-counter">
-            {{ fullscreenIndex + 1 }} / {{ images.length }}
+            {{ fullscreenIndex + 1 }} / {{ normalizedImages.length }}
           </div>
           
           <!-- Keyboard Hint -->

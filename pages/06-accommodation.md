@@ -39,7 +39,7 @@ transition: slide-left
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="mt-4">
 
-<img src="/assets/CleanShot_2025-12-07_16.22.01@2x.png" class="rounded-lg shadow-lg border border-gray-700" />
+<img src="/images/CleanShot_2025-12-07_16.22.01@2x.png" class="rounded-lg shadow-lg border border-gray-700" />
 
 </div>
 
@@ -66,7 +66,7 @@ transition: slide-left
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="mt-4">
 
-<img src="/assets/CleanShot_2025-12-07_16.25.35@2x.png" class="rounded-lg shadow-lg border border-gray-700" />
+<img src="/images/CleanShot_2025-12-07_16.25.35@2x.png" class="rounded-lg shadow-lg border border-gray-700" />
 
 </div>
 

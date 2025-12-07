@@ -37,7 +37,7 @@ transition: slide-up
   :initial="{ opacity: 0, y: -30 }"
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }">
 
-<img src="/assets/CleanShot_2025-12-07_16.32.06@2x.png" class="rounded-lg mt-2 shadow-xl border border-gray-700" />
+<img src="/images/CleanShot_2025-12-07_16.32.06@2x.png" class="rounded-lg mt-2 shadow-xl border border-gray-700" />
 
 </div>
 
@@ -71,7 +71,7 @@ transition: slide-left
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="text-center">
 
-<img src="/assets/CleanShot_2025-12-07_19.25.31@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
+<img src="/images/CleanShot_2025-12-07_19.25.31@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
 
 <div class="mt-2 text-sm text-gray-500">이자카야: 야키토리 카자네</div>
 
@@ -82,7 +82,7 @@ transition: slide-left
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="text-center">
 
-<img src="/assets/CleanShot_2025-12-07_19.35.15@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
+<img src="/images/CleanShot_2025-12-07_19.35.15@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
 
 <div class="mt-2 text-sm text-gray-500">라멘집: 쿠사츠온센 라멘야 아오바</div>
 
@@ -93,7 +93,7 @@ transition: slide-left
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="text-center">
 
-<img src="/assets/CleanShot_2025-12-07_19.28.39@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
+<img src="/images/CleanShot_2025-12-07_19.28.39@2x.png" class="rounded-lg shadow-xl h-52 object-cover object-left border border-gray-700 mx-auto" />
 
 <div class="mt-2 text-sm text-gray-500">스시집: 마코토 스시</div>
 
@@ -122,7 +122,7 @@ transition: slide-left
 
 <div class="col-span-1">
 
-<img src="/assets/CleanShot_2025-12-07_16.35.13@2x-5092969.png" class="rounded-lg shadow-xl border border-gray-700 h-40" />
+<img src="/images/CleanShot_2025-12-07_16.35.13@2x-5092969.png" class="rounded-lg shadow-xl border border-gray-700 h-40" />
 
 </div>
 
@@ -156,7 +156,7 @@ transition: slide-left
 
 ### <mdi-map-marker-check class="inline text-green-400" /> 방문했던 가게 (이전 도쿄여행 때)
 
-<img src="/assets/CleanShot_2025-12-07_19.29.15@2x.png" class="rounded-lg shadow-xl border border-gray-700 h-48" />
+<img src="/images/CleanShot_2025-12-07_19.29.15@2x.png" class="rounded-lg shadow-xl border border-gray-700 h-48" />
 
 </div>
 

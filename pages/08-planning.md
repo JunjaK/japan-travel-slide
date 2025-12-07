@@ -63,7 +63,7 @@ transition: slide-up
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="mt-12">
 
-<img src="/assets/CleanShot_2025-12-07_16.55.45@2x-5094151.png" class="rounded-lg shadow-xl border border-gray-700" />
+<img src="/images/CleanShot_2025-12-07_16.55.45@2x-5094151.png" class="rounded-lg shadow-xl border border-gray-700" />
 
 <div class="text-center mt-3 text-sm text-gray-500">
 관광 팜플렛으로 즐길 수 있는<br>관광 컨텐츠 알아보기

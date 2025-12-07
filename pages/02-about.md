@@ -90,7 +90,7 @@ layout: two-cols-header
   :initial="{ opacity: 0, y: -30 }"
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }">
 
-<img src="/assets/CleanShot_2025-12-07_16.52.31@2x.png" class="h-48 rounded-lg shadow-lg mx-auto border border-gray-700" />
+<img src="/images/CleanShot_2025-12-07_16.52.31@2x.png" class="h-48 rounded-lg shadow-lg mx-auto border border-gray-700" />
 
 </div>
 
@@ -99,6 +99,6 @@ layout: two-cols-header
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
   class="mt-2">
 
-<img src="/assets/image-20251207165909131-5094351.png" class="h-60 rounded-lg shadow-lg mx-auto border border-gray-700" />
+<img src="/images/image-20251207165909131-5094351.png" class="h-60 rounded-lg shadow-lg mx-auto border border-gray-700" />
 
 </div>
