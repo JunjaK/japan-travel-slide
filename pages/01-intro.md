@@ -1,6 +1,6 @@
 ---
 layout: intro-image
-image: '/assets/CleanShot_2025-12-07_23.15.58@2x.png'
+image: 'assets/CleanShot_2025-12-07_23.15.58@2x.png'
 class: text-center
 ---
 
