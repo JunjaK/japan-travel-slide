@@ -37,6 +37,7 @@ const showFullscreen = ref(false)
 const fullscreenImage = ref(null)
 const fullscreenIndex = ref(-1)
 const modalHoveredIndex = ref(-1)
+const selectedImageIndex = ref(-1)
 
 let animationId = null
 let lastTime = 0
@@ -122,13 +123,41 @@ const handleImageLeave = () => {
   hoveredIndex.value = -1
 }
 
-const openModal = () => {
+const handleImageClick = (image, displayIndex) => {
+  // normalizedImages에서 실제 인덱스 찾기
+  const actualIndex = normalizedImages.value.findIndex(img => 
+    img.src === image.src && JSON.stringify(img.tags) === JSON.stringify(image.tags)
+  )
+  const imageIndex = actualIndex >= 0 ? actualIndex : displayIndex
+  // 개별 이미지 클릭 시 바로 풀스크린으로 열기
+  if (imageIndex >= 0 && normalizedImages.value[imageIndex]) {
+    openFullscreen(normalizedImages.value[imageIndex], imageIndex)
+  }
+}
+
+const openModal = (imageIndex = -1) => {
+  selectedImageIndex.value = imageIndex >= 0 ? imageIndex : -1
   showModal.value = true
+  // 모달이 열린 후 선택된 이미지로 스크롤
+  if (imageIndex >= 0) {
+    setTimeout(() => {
+      scrollToSelectedImage(imageIndex)
+    }, 100)
+  }
+}
+
+const scrollToSelectedImage = (index) => {
+  const modalContent = document.querySelector('.modal-content')
+  const imageCard = modalContent?.querySelector(`.modal-image-card:nth-child(${index + 1})`)
+  if (imageCard && modalContent) {
+    imageCard.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
 }
 
 const closeModal = () => {
   showModal.value = false
   modalHoveredIndex.value = -1
+  selectedImageIndex.value = -1
 }
 
 const openFullscreen = (image, index) => {
@@ -249,6 +278,7 @@ onUnmounted(() => {
           :style="imageStyles[index]"
           @mouseenter="handleImageHover(index)"
           @mouseleave="handleImageLeave"
+          @click.stop="handleImageClick(image, index)"
         >
           <img :src="image.src" :alt="image.title || `Image ${index + 1}`" />
           <div class="image-glow"></div>
@@ -284,7 +314,10 @@ onUnmounted(() => {
                 v-for="(image, index) in normalizedImages"
                 :key="index"
                 class="modal-image-card"
-                :class="{ 'is-hovered': modalHoveredIndex === index }"
+                :class="{ 
+                  'is-hovered': modalHoveredIndex === index,
+                  'is-selected': selectedImageIndex === index
+                }"
                 @mouseenter="handleModalImageHover(index)"
                 @mouseleave="handleModalImageLeave"
                 @click="openFullscreen(image, index)"
@@ -643,6 +676,32 @@ onUnmounted(() => {
   transform: translateY(-15px) scale(1.08);
 }
 
+.modal-image-card.is-selected .card-3d-wrapper {
+  box-shadow: 
+    0 30px 60px rgba(0,0,0,0.5),
+    0 0 50px rgba(97, 166, 251, 0.6),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  border-color: rgba(97, 166, 251, 0.8);
+  border-width: 2px;
+  transform: translateY(-10px) scale(1.05);
+  animation: selected-pulse 2s ease-in-out infinite;
+}
+
+@keyframes selected-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 30px 60px rgba(0,0,0,0.5),
+      0 0 50px rgba(97, 166, 251, 0.6),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+  50% {
+    box-shadow: 
+      0 30px 60px rgba(0,0,0,0.5),
+      0 0 70px rgba(97, 166, 251, 0.8),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+}
+
 .card-3d-inner {
   position: relative;
   width: 100%;
@@ -696,7 +755,7 @@ onUnmounted(() => {
   font-size: 0.75rem;
   font-weight: 500;
   color: white;
-  background: rgba(99, 102, 241, 0.8);
+  background: rgba(97, 166, 251, 0.8);
   border-radius: 20px;
   backdrop-filter: blur(4px);
 }
@@ -739,7 +798,7 @@ onUnmounted(() => {
   font-size: 0.9rem;
   font-weight: 500;
   color: white;
-  background: rgba(99, 102, 241, 0.7);
+  background: rgba(97, 166, 251, 0.7);
   border-radius: 25px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
@@ -748,7 +807,7 @@ onUnmounted(() => {
 }
 
 .fullscreen-tag:hover {
-  background: rgba(99, 102, 241, 0.9);
+  background: rgba(97, 166, 251, 0.9);
   transform: scale(1.05);
 }
 
@@ -842,7 +901,7 @@ onUnmounted(() => {
   background: rgba(255,255,255,0.1);
   border-radius: 4px;
   border: 1px solid rgba(255,255,255,0.2);
-  font-family: inherit;
+  font-family: 'Gothic A1', sans-serif;
   font-size: 0.75rem;
 }
 

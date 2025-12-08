@@ -8,6 +8,8 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@fontsource/gothic-a1": "^5.2.8",
+    "@fontsource/pretendard": "^5.2.5",
     "@slidev/cli": "^52.10.1",
     "@slidev/theme-apple-basic": "^0.25.1",
     "@slidev/theme-default": "latest",

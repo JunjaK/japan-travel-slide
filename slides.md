@@ -12,11 +12,8 @@ transition: slide-left
 mdc: true
 colorSchema: dark
 fonts:
-  sans: 'Pretendard'
-  serif: 'Noto Serif KR'
-  mono: 'Fira Code'
+  provider: none
 src: ./pages/01-intro.md
-
 ---
 
 

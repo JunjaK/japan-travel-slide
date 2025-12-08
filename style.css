@@ -1,3 +1,14 @@
+@import '@fontsource/gothic-a1';
+@import '@fontsource/pretendard';
+
+body {
+  font-family: 'Pretendard','Gothic A1', sans-serif !important;  
+}
+
+#page-root {
+  font-family: 'Pretendard','Gothic A1', sans-serif !important;  
+}
+
 /* Global Styles for Japan Travel Slides */
 
 /* H3 스타일 - 다크모드 최적화 */
