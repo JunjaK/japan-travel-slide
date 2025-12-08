@@ -28,7 +28,7 @@ transition: slide-up
 
 #### <mdi-numeric-1-circle class="inline text-blue-400" /> 러프하게 짜기
 
-- 현지에서는 **변수가 많음**
+- 현지에서는 **변수**가 많기 때문에 큰 틀만 잡기 
 - 단, 도쿄·오사카 등 대도시는 할 수 있는 컨텐츠가 많기 때문에 **타이트하게** 짜는 것이 적절
 
 </div>
@@ -36,7 +36,7 @@ transition: slide-up
 <div v-click v-motion
   :initial="{ opacity: 0, y: -20 }"
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
-  class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+  class="mt-3 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 #### <mdi-numeric-2-circle class="inline text-green-400" /> 구글 지도 활용
 
@@ -47,7 +47,7 @@ transition: slide-up
 <div v-click v-motion
   :initial="{ opacity: 0, y: -20 }"
   :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
-  class="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
+  class="mt-3 p-4 bg-gray-800/50 rounded-lg border border-gray-700" style="padding-bottom: 0">
 
 #### <mdi-numeric-3-circle class="inline text-orange-400" /> 현지 관광안내소 방문
 
@@ -67,6 +67,7 @@ transition: slide-up
 
 <div class="text-center mt-3 text-sm text-gray-500">
 관광 팜플렛으로 즐길 수 있는<br>관광 컨텐츠 알아보기
+<br>(관광안내소에서 잔뜩 집어옵시다.)
 </div>
 
 </div>
